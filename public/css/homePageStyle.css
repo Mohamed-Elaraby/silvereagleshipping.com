@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#homePage{
+    height: 100vh;
+    position: relative;
+}
+.homePageContent{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'PT Sans Narrow', sans-serif;
+
+}
+
+@media screen and (max-width: 992px) {
+    .homePageContent{
+        font-size: 15px;
+    }
+    #mainNav {
+        background-color: #292929 !important;
+    }
+    #mainNav .navbar-toggler{
+        color: #fff !important;
+    }
+
+    .nav-link{
+        color: #fff !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .homePageContent{
+        font-size: 10px;
+    }
+    #mainNav {
+        background-color: #292929 !important;
+    }
+    #mainNav .navbar-toggler{
+        color: #fff !important;
+    }
+
+    .nav-link{
+        color: #fff !important;
+    }
+}

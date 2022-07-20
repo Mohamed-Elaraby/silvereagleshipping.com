@@ -1,0 +1,39 @@
+.customStyle{
+    position: absolute; top: 80%; left: 13%;
+}
+.contactUsPage{
+    font-size: 16px !important;
+}
+.contact-info{
+    padding-top: 120px;
+}
+.s-contact{
+    border: #1c7430 solid 5px;
+    padding-right: 20px;
+}
+
+.borderd{
+    border-bottom: #DEE2E6 1px solid;
+}
+
+@media screen and (max-width: 992px) {
+    .customStyle{
+        position: absolute !important;
+        top: 80% !important;
+        left: 13% !important;
+        font-size: 18px!important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .customStyle{
+        position: absolute !important;
+        top: 80% !important;
+        left: 13% !important;
+        font-size: 12px!important;
+    }
+    .contactUsPage{
+        font-size: 14px !important;
+    }
+}
+
