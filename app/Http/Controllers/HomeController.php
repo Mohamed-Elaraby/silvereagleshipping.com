@@ -41,8 +41,8 @@ class HomeController extends Controller
 
     public function sendMail( Request $request)
     {
-    $mailSend = Mail::to('shippingsilvereagle@gmail.com') ->send(new ContactForm());
-        dd($mailSend);
+    Mail::to('mido.b333@gmail.com') ->send(new ContactForm());
+        return redirect()->back()->with('success', "You'r Message Sent Successfully. ");
         $this->rules = $this->rules();
          // Check for empty fields
             $validator = Validator::make($request->all(), $this->rules);
