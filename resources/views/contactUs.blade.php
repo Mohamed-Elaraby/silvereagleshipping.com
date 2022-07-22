@@ -13,7 +13,7 @@
                                     <td style="width: 180px; height: 80px">Genral Inquiry</td>
                                     <td>: info@silvereagleshipping.com </td>
                                 </tr>
-                            
+
                                 <tr>
                                     <td class="borderd" style="width: 180px; height: 80px">Genral Manager</td>
                                     <td class="borderd">: osama.elsayed@silvereagleshipping.com</td>
@@ -82,11 +82,21 @@
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls">
                                 <label>Message</label>
-                                <textarea name="message" value="{{ old('message') }}" rows="5" class="form-control" placeholder="Message" id="message"></textarea>
-                                @if ($errors->has('message'))
-                                    <div class="text-danger" role="alert">{{ $errors->first('message') }}</div>
+                                <textarea name="body" value="{{ old('body') }}" rows="5" class="form-control" placeholder="Message" id="body"></textarea>
+                                @if ($errors->has('body'))
+                                    <div class="text-danger" role="alert">{{ $errors->first('body') }}</div>
                                 @endif
                             </div>
+                        </div>
+                        <br>
+                        @if ($errors->has('g-recaptcha-response'))
+                            <span class="help-block" style="color: red">
+                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                            </span>
+                        @endif
+                        <div class="form-group">
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
                         </div>
                         <br>
                         <div class="form-group">
@@ -99,4 +109,10 @@
     </div>
 
 @endsection
-
+@push('js')
+    <script type="text/javascript">
+        var onloadCallback = function() {
+            alert("grecaptcha is ready!");
+        };
+    </script>
+@endpush

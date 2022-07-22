@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactForm extends Mailable
+class ContactFormMarkdown extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,10 @@ class ContactForm extends Mailable
      */
     public function build()
     {
-        return $this->view('email.contactForm');
+        return $this
+            ->from('info@silvereagleshipping.com', 'Site Contact Form')
+            ->replyTo('momo@gmail.com')
+            ->subject('Message Coming From Site Contact Form')
+            ->markdown('emails.contactFormMarkdown');
     }
 }

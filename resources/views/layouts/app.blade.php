@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     @include('includes.headerFiles')
-
+    @stack('css')
 
     <title>@yield('title')</title>
 
@@ -71,7 +71,7 @@
 </footer>
 
 @include('includes.footerFiles')
-
+@stack('js')
 </body>
 
 </html>
