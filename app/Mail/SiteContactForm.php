@@ -36,7 +36,7 @@ class SiteContactForm extends Mailable
     public function build(Request $request)
     {
         return $this
-            ->from('contact.form@silvereagleshipping.com', 'Site Contact Form')
+            ->from('info@silvereagleshipping.com', 'Site Contact Form')
             ->replyTo($request -> email)
             ->subject("Website Contact Form: " . $this->name)
             ->view('emails.contactForm');

@@ -49,7 +49,7 @@ class HomeController extends Controller
         if ($validator->fails())
             return redirect()->back()->withErrors($validator);
 
-        $to         = 'contact.form@silvereagleshipping.com';
+        $to         = 'info@silvereagleshipping.com';
         $name       = $request->name;
         $email      = $request->email;
         $phone      = $request->phone;
